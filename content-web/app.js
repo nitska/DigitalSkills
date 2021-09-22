@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'dist/content-web')));
 const contentApiUrl = process.env.CONTENT_API_URL || "http://localhost:3001";
-
+//testactions
 
 function getSessions(cb) {
   request(contentApiUrl + '/sessions', function (err, response, body) {
