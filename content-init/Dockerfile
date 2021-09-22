@@ -14,4 +14,5 @@ COPY . /usr/src/app
 FROM base as final
 WORKDIR /usr/src/app
 COPY --from=build /usr/src/app .
+ENV MONGODB_CONNECTION=mongodb://172.17.0.1:27017/contentdb
 CMD [ "npm", "start" ]
