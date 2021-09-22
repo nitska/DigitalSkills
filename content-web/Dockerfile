@@ -19,4 +19,5 @@ RUN ng build
 FROM base as final
 WORKDIR /usr/src/app
 COPY --from=build /usr/src/app .
+ENV CONTENT_API_URL=http://172.17.0.1:3001
 CMD [ "node", "app.js" ]
